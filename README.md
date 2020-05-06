@@ -7,6 +7,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[name](name/) | 12.0.1.0.0 | description
+[l10n_es_aeat_mod303](l10n_es_aeat_mod303/) | 12.0.1.0.0 | PDF with mod303 data
 
 [//]: # (end addons)
