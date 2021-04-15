@@ -133,7 +133,7 @@
                                     Statement Type:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.type"/>
+                                    <span t-field="o.statement_type"/>
                                 </td>
                             </tr>
                             <tr>
