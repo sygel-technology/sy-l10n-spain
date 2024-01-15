@@ -7,6 +7,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 15.0.1.0.0 | PDF with mod303 data
+[l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 16.0.1.0.0 | PDF with mod303 data
 
 [//]: # (end addons)
