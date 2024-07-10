@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
     <template id="report_aeat_mod303_document">
         <t t-call="web.external_layout">
             <div class="page">
                 <style type="text/css">
-                    .detail_table{
-                        width:100%;
-                        margin-top: 2%;
-                    }
-                    .td_detail_table{
-                        width: 50%;
-                        padding-right: 5%;
-                    }
+.detail_table {
+    width: 100%;
+    margin-top: 2%;
+}
+.td_detail_table {
+    width: 50%;
+    padding-right: 5%;
+}
                 </style>
-                <div class="oe_structure"/>
+                <div class="oe_structure" />
                 <div class="text-center" id="title">
                     <h4>Modelo 303. IVA. Autoliquidación.</h4>
                 </div>
@@ -24,14 +24,17 @@
                             <h4>Declaration</h4>
                         </div>
                     </div>
-                    <table class="detail_table table table-sm" id="mod303_declaration_table">
+                    <table
+                        class="detail_table table table-sm"
+                        id="mod303_declaration_table"
+                    >
                         <tbody class="invoice_tbody">
                             <tr>
                                 <td class="td_detail_table">
                                     Report:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.name"/>
+                                    <span t-field="o.name" />
                                 </td>
                             </tr>
                             <tr>
@@ -39,7 +42,7 @@
                                     Company:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.company_id"/>
+                                    <span t-field="o.company_id" />
                                 </td>
                             </tr>
                             <tr>
@@ -47,7 +50,7 @@
                                     VAT Number:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.company_vat"/>
+                                    <span t-field="o.company_vat" />
                                 </td>
                             </tr>
                             <tr>
@@ -55,7 +58,7 @@
                                     Year:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.year"/>
+                                    <span t-field="o.year" />
                                 </td>
                             </tr>
                             <tr>
@@ -63,7 +66,7 @@
                                     Period Type:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.period_type"/>
+                                    <span t-field="o.period_type" />
                                 </td>
                             </tr>
                             <tr>
@@ -71,7 +74,9 @@
                                     Dates:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.date_start"/> - <span t-field="o.date_end"/>
+                                    <span t-field="o.date_start" /> - <span
+                                        t-field="o.date_end"
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -79,7 +84,7 @@
                                     Export Config:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.export_config_id"/>
+                                    <span t-field="o.export_config_id" />
                                 </td>
                             </tr>
                             <tr>
@@ -87,21 +92,21 @@
                                     Journal:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.journal_id"/>
+                                    <span t-field="o.journal_id" />
                                 </td>
                             </tr>
                                 <td class="td_detail_table">
                                     Counterpart Account:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.counterpart_account_id"/>
+                                    <span t-field="o.counterpart_account_id" />
                                 </td>
                             <tr>
                                 <td class="td_detail_table">
                                     L.R. VAT Number:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.representative_vat"/>
+                                    <span t-field="o.representative_vat" />
                                 </td>
                             </tr>
                             <tr>
@@ -109,7 +114,7 @@
                                     Support Type:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.support_type"/>
+                                    <span t-field="o.support_type" />
                                 </td>
                             </tr>
                             <tr>
@@ -117,7 +122,7 @@
                                     Calculation Date:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.calculation_date"/>
+                                    <span t-field="o.calculation_date" />
                                 </td>
                             </tr>
                             <tr>
@@ -125,7 +130,7 @@
                                     Bank Account:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.partner_bank_id"/>
+                                    <span t-field="o.partner_bank_id" />
                                 </td>
                             </tr>
                             <tr>
@@ -133,7 +138,7 @@
                                     Statement Type:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.statement_type"/>
+                                    <span t-field="o.statement_type" />
                                 </td>
                             </tr>
                             <tr>
@@ -152,14 +157,17 @@
                             <h4>Contact Info</h4>
                         </div>
                     </div>
-                    <table class="detail_table table table-sm" id="mod303_contact_table">
+                    <table
+                        class="detail_table table table-sm"
+                        id="mod303_contact_table"
+                    >
                         <tbody class="invoice_tbody">
                             <tr>
                                 <td class="td_detail_table">
                                     Full Name:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.contact_name"/>
+                                    <span t-field="o.contact_name" />
                                 </td>
                             </tr>
                             <tr>
@@ -167,7 +175,7 @@
                                     Contact Phone:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.contact_phone"/>
+                                    <span t-field="o.contact_phone" />
                                 </td>
                             </tr>
                             <tr>
@@ -175,7 +183,7 @@
                                     Email:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.contact_email"/>
+                                    <span t-field="o.contact_email" />
                                 </td>
                             </tr>
                         </tbody>
@@ -192,7 +200,7 @@
                                     [27] VAT Payable:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.total_devengado"/>
+                                    <span t-field="o.total_devengado" />
                                 </td>
                             </tr>
                             <tr>
@@ -200,7 +208,7 @@
                                     [45] VAT Receivable:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.total_deducir"/>
+                                    <span t-field="o.total_deducir" />
                                 </td>
                             </tr>
                             <tr>
@@ -208,7 +216,7 @@
                                     [46] General Scheme Result:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.casilla_46"/>
+                                    <span t-field="o.casilla_46" />
                                 </td>
                             </tr>
                             <tr>
@@ -216,7 +224,7 @@
                                     [65] % Attributable to State:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.porcentaje_atribuible_estado"/>
+                                    <span t-field="o.porcentaje_atribuible_estado" />
                                 </td>
                             </tr>
                             <tr>
@@ -224,7 +232,7 @@
                                     [66] Attributable to the Administration:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.atribuible_estado"/>
+                                    <span t-field="o.atribuible_estado" />
                                 </td>
                             </tr>
                             <tr>
@@ -232,7 +240,7 @@
                                     [67] Fees to Compensate:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.cuota_compensar"/>
+                                    <span t-field="o.cuota_compensar" />
                                 </td>
                             </tr>
                             <tr>
@@ -240,7 +248,7 @@
                                     [68] Annual Regularization:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.regularizacion_anual"/>
+                                    <span t-field="o.regularizacion_anual" />
                                 </td>
                             </tr>
                             <tr>
@@ -248,7 +256,7 @@
                                     [77] VAT Deferred (Settle by Customs):
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.casilla_77"/>
+                                    <span t-field="o.casilla_77" />
                                 </td>
                             </tr>
                             <tr>
@@ -256,7 +264,7 @@
                                     [69] Result:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.casilla_69"/>
+                                    <span t-field="o.casilla_69" />
                                 </td>
                             </tr>
                             <tr>
@@ -264,7 +272,7 @@
                                     [70] To Be Deducted:
                                 </td>
                                 <td class="td_detail_table">
-                                    <span t-field="o.previous_result"/>
+                                    <span t-field="o.previous_result" />
                                 </td>
                             </tr>
                             <tr>
@@ -272,7 +280,7 @@
                                     <b>[71] Settlement Result:</b>
                                 </td>
                                 <td class="td_detail_table">
-                                    <b><span t-field="o.resultado_liquidacion"/></b>
+                                    <b><span t-field="o.resultado_liquidacion" /></b>
                                 </td>
                             </tr>
                             <tr>
@@ -280,7 +288,7 @@
                                     <b>Result Type:</b>
                                 </td>
                                 <td class="td_detail_table">
-                                    <b><span t-field="o.result_type"/></b>
+                                    <b><span t-field="o.result_type" /></b>
                                 </td>
                             </tr>
                         </tbody>
@@ -302,13 +310,13 @@
                             <tr t-foreach="o.tax_line_ids" t-as="l">
                                 <template id="l10n_es_aeat_mod303.mod303_tax_lines">
                                     <td id="data_partner_vat">
-                                        <span t-field="l.field_number"/>
+                                        <span t-field="l.field_number" />
                                     </td>
                                     <td id="data_partner_name">
-                                        <span t-field="l.name"/>
+                                        <span t-field="l.name" />
                                     </td>
                                     <td id="data_operation_key">
-                                        <span t-field="l.amount"/>
+                                        <span t-field="l.amount" />
                                     </td>
                                 </template>
                             </tr>
@@ -321,7 +329,7 @@
     <template id="report_l10n_es_mod303_pdf">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <t t-call="l10n_es_aeat_mod303_print.report_aeat_mod303_document"/>
+                <t t-call="l10n_es_aeat_mod303_print.report_aeat_mod303_document" />
             </t>
         </t>
     </template>
