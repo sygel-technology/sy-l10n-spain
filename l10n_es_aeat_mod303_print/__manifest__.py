@@ -6,7 +6,7 @@
     "summary": "PDF del model 303",
     "version": "16.0.1.0.0",
     "category": "Uncategorized",
-    "website": "https://www.sygel.es",
+    "website": "https://github.com/sygel-technology/sy-l10n-spain",
     "author": "Sygel, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
