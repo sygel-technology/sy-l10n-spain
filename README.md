@@ -1,8 +1,8 @@
 
 <!-- /!\ Non OCA Context : Set here the badge of your runbot / runboat instance. -->
-[![Pre-commit Status](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/pre-commit.yml/badge.svg?branch=16.0)](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/pre-commit.yml?query=branch%3A16.0)
-[![Build Status](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/test.yml/badge.svg?branch=16.0)](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/test.yml?query=branch%3A16.0)
-[![codecov](https://codecov.io/gh/sygel-technology/sy-l10n-spain/branch/16.0/graph/badge.svg)](https://codecov.io/gh/sygel-technology/sy-l10n-spain)
+[![Pre-commit Status](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/pre-commit.yml/badge.svg?branch=17.0)](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/pre-commit.yml?query=branch%3A17.0)
+[![Build Status](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/test.yml/badge.svg?branch=17.0)](https://github.com/sygel-technology/sy-l10n-spain/actions/workflows/test.yml?query=branch%3A17.0)
+[![codecov](https://codecov.io/gh/sygel-technology/sy-l10n-spain/branch/17.0/graph/badge.svg)](https://codecov.io/gh/sygel-technology/sy-l10n-spain)
 <!-- /!\ Non OCA Context : Set here the badge of your translation instance. -->
 
 <!-- /!\ do not modify above this line -->
@@ -17,11 +17,7 @@ Odoo Project Management and Services Company Addons
 
 [//]: # (addons)
 
-Available addons
-----------------
-addon | version | maintainers | summary
---- | --- | --- | ---
-[l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 16.0.1.0.0 |  | PDF del model 303
+This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
 
 [//]: # (end addons)
 
