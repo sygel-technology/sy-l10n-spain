@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 15.0.1.0.0 |  | PDF del model 303
+[l10n_es_facturae_custom_rounding](l10n_es_facturae_custom_rounding/) | 15.0.1.0.0 |  | Set right values in Facturae when using custom rounding
 
 [//]: # (end addons)
 
