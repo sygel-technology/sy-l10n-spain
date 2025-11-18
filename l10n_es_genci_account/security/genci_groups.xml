@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="group_genci_enabled" model="res.groups">
+        <field name="name">Enable GENCI</field>
+        <field name="category_id" ref="base.module_category_accounting" />
+    </record>
+</odoo>

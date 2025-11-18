@@ -1,0 +1,37 @@
+<odoo>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+    <record id="l10n_es_genci_account_product_template_form_view" model="ir.ui.view">
+        <field name="name">l10n.es.account.genci.product.template.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <field name="categ_id" position="before">
+                <field
+                    name="genci_subject"
+                    groups="l10n_es_genci_account.group_genci_enabled"
+                />
+                <field
+                    name="genci_rule_id"
+                    attrs="{'invisible': ['|',('genci_subject', '!=', 'yes'), ('product_variant_count', '>', 1)], 'required': [('genci_subject', '=', 'yes'), ('product_variant_count', '=', 1)]}"
+                    groups="l10n_es_genci_account.group_genci_enabled"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="l10n_es_genci_account_product_variant_form_view" model="ir.ui.view">
+        <field name="name">l10n.es.genci.product.variant.form.view</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='pricing']" position="inside">
+                <field
+                    name="genci_rule_id"
+                    string="GENCI Rule"
+                    groups="l10n_es_genci_account.group_genci_enabled"
+                />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

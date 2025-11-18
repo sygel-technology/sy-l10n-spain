@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+    <record id="product_genci_service" model="product.product">
+        <field name="name">Tasa GENCI (R.D. 1055/2022)</field>
+        <field name="company_id" eval="False" />
+        <field name="detailed_type">service</field>
+        <field name="list_price">0.0</field>
+        <field name="genci_subject">no</field>
+        <field name="taxes_id" eval="False" />
+        <field name="supplier_taxes_id" eval="False" />
+        <field name="sale_ok" eval="False" />
+        <field name="purchase_ok" eval="False" />
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+    </record>
+</odoo>
