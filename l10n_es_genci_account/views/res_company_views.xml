@@ -1,0 +1,22 @@
+<odoo>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+    <record id="l10n_es_genci_account_view_company_form" model="ir.ui.view">
+        <field name="name">l10n.es.account.genci.view.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="genci" string="Genci">
+                    <group>
+                        <field name="genci_enable" />
+                        <field
+                            name="genci_show_in_reports"
+                            attrs="{'invisible': [('genci_enable', '=', False)]}"
+                        />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

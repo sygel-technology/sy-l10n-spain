@@ -1,0 +1,377 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_es_genci_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-05 12:40+0000\n"
+"PO-Revision-Date: 2025-12-05 13:54+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: l10n_es_genci_account
+#. odoo-python
+#: code:addons/l10n_es_genci_account/models/genci_rule.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (Còpia)"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_res_company__genci_enable
+msgid ""
+"Activates the GENCI module for this company, enabling all related "
+"configurations."
+msgstr ""
+"Activa el mòdul GENCI per a aquesta empresa, permetent totes les "
+"configuracions relacionades."
+
+#. module: l10n_es_genci_account
+#: model:ir.actions.act_window,name:l10n_es_genci_account.action_genci_capacity
+#: model:ir.ui.menu,name:l10n_es_genci_account.menu_genci_capacity
+msgid "Capacities"
+msgstr "Capacitats"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__name
+msgid "Capacity"
+msgstr "Capacitat"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_capacity__name
+msgid "Capacity or volume of the container (e.g., 1L, 5L)"
+msgstr "Capacitat o volum del contenidor (p. ex., 1 L, 5 L)"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_rule__capacity_id
+msgid "Capacity or volume of the container to which this GENCI rate applies"
+msgstr ""
+"Capacitat o volum del contenidor al qual s’aplica aquesta tarifa GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields.selection,name:l10n_es_genci_account.selection__genci_rule__use_type__commercial
+msgid "Commercial"
+msgstr "Comercial"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_res_company
+msgid "Companies"
+msgstr "Empreses"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_res_partner
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__capacity_id
+msgid "Container Capacity"
+msgstr "Capacitat del contenidor"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_genci_capacity
+msgid "Container Capacity for GENCI"
+msgstr "Capacitat del contenidor per a GENCI"
+
+#. module: l10n_es_genci_account
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_account.report_invoice_document
+msgid "Contribución GENCI (RD 679/2006):"
+msgstr "Contribució GENCI (RD 679/2006):"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__create_uid
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__create_uid
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__create_date
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__create_date
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_rule__name
+msgid "Descriptive name of the GENCI rule"
+msgstr "Nom descriptiu de la regla GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_res_partner__genci_subject
+#: model:ir.model.fields,help:l10n_es_genci_account.field_res_users__genci_subject
+msgid "Determine if this customer/supplier is subject to the Genci rate."
+msgstr ""
+"Determina si aquest client/proveïdor està subjecte a la tarifa GENCI."
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__display_name
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__display_name
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__display_name
+msgid "Display Name"
+msgstr "Nom mostrat"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_res_company__genci_enable
+#: model:res.groups,name:l10n_es_genci_account.group_genci_enabled
+msgid "Enable GENCI"
+msgstr "Activa GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_rule__date_to
+msgid "End date of the validity period of this rate"
+msgstr "Data de finalització del període de validesa d’aquesta tarifa"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr "Posició fiscal"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__date_from
+msgid "From"
+msgstr "Des de"
+
+#. module: l10n_es_genci_account
+#: model:ir.ui.menu,name:l10n_es_genci_account.menu_genci
+msgid "GENCI"
+msgstr "GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_account_move_line__genci_amount
+msgid "GENCI Contribution"
+msgstr "Contribució GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_product_template__genci_rule_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_account.l10n_es_genci_account_product_variant_form_view
+msgid "GENCI Rule"
+msgstr "Regla GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.actions.act_window,name:l10n_es_genci_account.action_genci_rule
+#: model:ir.ui.menu,name:l10n_es_genci_account.menu_genci_rule
+msgid "GENCI Rules"
+msgstr "Reglas GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_account_move_line__genci_amount
+msgid "GENCI contribution corresponding to this product line."
+msgstr "Contribució GENCI corresponent a aquesta línia de producte."
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_product_product__genci_rule_id
+msgid "GENCI rule"
+msgstr "Regla GENCI"
+
+#. module: l10n_es_genci_account
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_account.l10n_es_genci_account_view_company_form
+msgid "Genci"
+msgstr "Genci"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_product_product__genci_has_amount
+msgid "Genci Has Amount"
+msgstr ""
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_genci_rule
+msgid "Genci Rule"
+msgstr "Regla Genci"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__id
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__id
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_res_company__genci_show_in_reports
+msgid "If active, GENCI amount is shown in reports."
+msgstr "Si està activat, l'import GENCI es mostra als informes."
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields.selection,name:l10n_es_genci_account.selection__genci_rule__use_type__industrial
+msgid "Industrial"
+msgstr "Industrial"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_account_bank_statement_line__is_genci
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_account_move__is_genci
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_account_payment__is_genci
+msgid "Is GENCI"
+msgstr "És GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_account_move
+msgid "Journal Entry"
+msgstr "Assentament comptable"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunt comptable"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity____last_update
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material____last_update
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule____last_update
+msgid "Last Modified on"
+msgstr "Última actualització el"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__write_uid
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__write_uid
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_capacity__write_date
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__write_date
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__write_date
+msgid "Last Updated on"
+msgstr "Última actualització a"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_material__name
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__material_id
+msgid "Material Type"
+msgstr "Tipus de material"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_genci_material
+msgid "Material for GENCI"
+msgstr "Material per a GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_rule__material_id
+msgid "Material type of the container to which this GENCI rate applies"
+msgstr "Tipus de material del contenidor al qual s’aplica aquesta taxa GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.actions.act_window,name:l10n_es_genci_account.action_genci_material
+#: model:ir.ui.menu,name:l10n_es_genci_account.menu_genci_material
+msgid "Materials"
+msgstr "Materials"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields.selection,name:l10n_es_genci_account.selection__product_template__genci_subject__no
+msgid "No"
+msgstr "No"
+
+#. module: l10n_es_genci_account
+#. odoo-python
+#: code:addons/l10n_es_genci_account/models/account_move.py:0
+#, python-format
+msgid ""
+"No GENCI rule is valid for the product '%(product)s' on the invoice date "
+"(%(date)s)."
+msgstr ""
+"Cap regla GENCI és vàlida per al producte '%(product)s' en la data de la "
+"factura (%(date)s)."
+
+#. module: l10n_es_genci_account
+#. odoo-python
+#: code:addons/l10n_es_genci_account/models/account_move.py:0
+#, python-format
+msgid "No accounting account is defined for the GENCI product '%(product)s'."
+msgstr ""
+"No s'ha definit cap compte comptable per al producte GENCI '%(product)s'."
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_product_template
+msgid "Product"
+msgstr "Producte"
+
+#. module: l10n_es_genci_account
+#: model:ir.model,name:l10n_es_genci_account.model_product_product
+msgid "Product Variant"
+msgstr "Variants de producte"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_res_company__genci_show_in_reports
+msgid "Show detailed GENCI amount in report lines"
+msgstr "Mostrar l'import detallat de GENCI a les línies de l'informe"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_rule__date_from
+msgid "Start date of the validity period of this rate"
+msgstr "Data d'inici del període de validesa d'aquesta taxa"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_product_product__genci_subject
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_product_template__genci_subject
+msgid "Subject To GENCI"
+msgstr "Subjecte a GENCI"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_account_fiscal_position__genci_subject
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_res_partner__genci_subject
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_res_users__genci_subject
+msgid "Subject to GENCI"
+msgstr "Subjecte a GENCI"
+
+#. module: l10n_es_genci_account
+#: model:product.template,name:l10n_es_genci_account.product_genci_service_product_template
+msgid "Tasa GENCI (R.D. 1055/2022)"
+msgstr "Taxa GENCI (R.D. 1055/2022)"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__date_to
+msgid "To"
+msgstr "A"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_genci_material__name
+msgid "Type of material (metal, plastic, glass, etc.)"
+msgstr "Tipus de material (metal, plàstic, vidre, etc.)"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__unit_price
+msgid "Unit Price"
+msgstr "Preu unitari"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,field_description:l10n_es_genci_account.field_genci_rule__use_type
+msgid "Use"
+msgstr "Ús"
+
+#. module: l10n_es_genci_account
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_account.genci_rule_form_view
+msgid "Validity Period"
+msgstr "Període de validesa"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields.selection,name:l10n_es_genci_account.selection__product_template__genci_subject__yes
+msgid "Yes"
+msgstr "Si"
+
+#. module: l10n_es_genci_account
+#: model:ir.model.fields,help:l10n_es_genci_account.field_account_bank_statement_line__is_genci
+#: model:ir.model.fields,help:l10n_es_genci_account.field_account_move__is_genci
+#: model:ir.model.fields,help:l10n_es_genci_account.field_account_payment__is_genci
+msgid ""
+"[\"If unchecked, the GENCI rate will not be applied even if the products "
+"require it.\"]"
+msgstr ""
+"[\"i no està marcat, la taxa GENCI no s'aplicarà tot i que els productes "
+"la requereixin.\"]"

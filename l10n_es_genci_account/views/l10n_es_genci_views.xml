@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+    <record id="genci_rule_form_view" model="ir.ui.view">
+        <field name="name">genci.rule.form.view</field>
+        <field name="model">genci.rule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="unit_price" />
+                            <field name="currency_id" />
+                        </group>
+                        <group>
+                            <field name="material_id" />
+                            <field name="capacity_id" />
+                            <field name="use_type" />
+                        </group>
+                        <group string="Validity Period">
+                                <field
+                                name="date_from"
+                                widget="daterange"
+                                options="{'related_end_date': 'date_to'}"
+                            />
+                                <field
+                                name="date_to"
+                                widget="daterange"
+                                options="{'related_start_date': 'date_from'}"
+                            />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="genci_rule_tree_view" model="ir.ui.view">
+        <field name="name">genci.rule.tree.view</field>
+        <field name="model">genci.rule</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="material_id" />
+                <field name="capacity_id" />
+                <field name="use_type" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="unit_price" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- MATERIALS -->
+
+    <record id="genci_material_tree_view" model="ir.ui.view">
+        <field name="name">genci.material.tree</field>
+        <field name="model">genci.material</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="genci_material_form_view" model="ir.ui.view">
+        <field name="name">genci.material.form</field>
+        <field name="model">genci.material</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- CAPACITY -->
+
+    <record id="genci_capacity_tree_view" model="ir.ui.view">
+        <field name="name">genci.capacity.tree</field>
+        <field name="model">genci.capacity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="genci_capacity_form_view" model="ir.ui.view">
+        <field name="name">genci.capacity.form</field>
+        <field name="model">genci.capacity</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTIONS -->
+
+    <record id="action_genci_rule" model="ir.actions.act_window">
+        <field name="name">Genci Rules</field>
+        <field name="res_model">genci.rule</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="genci_rule_tree_view" />
+    </record>
+    <record id="action_genci_material" model="ir.actions.act_window">
+        <field name="name">Materials</field>
+        <field name="res_model">genci.material</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_genci_capacity" model="ir.actions.act_window">
+        <field name="name">Capacities</field>
+        <field name="res_model">genci.capacity</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- MENUITEMS -->
+
+    <menuitem
+        id="menu_genci"
+        name="GENCI"
+        parent="account.menu_finance_configuration"
+        groups="l10n_es_genci_account.group_genci_enabled"
+    />
+    <menuitem
+        id="menu_genci_rule"
+        name="Genci Rules"
+        parent="menu_genci"
+        action="action_genci_rule"
+        groups="l10n_es_genci_account.group_genci_enabled"
+    />
+    <menuitem
+        id="menu_genci_material"
+        name="Materials"
+        parent="menu_genci"
+        action="action_genci_material"
+        groups="l10n_es_genci_account.group_genci_enabled"
+    />
+    <menuitem
+        id="menu_genci_capacity"
+        name="Capacities"
+        parent="menu_genci"
+        action="action_genci_capacity"
+        groups="l10n_es_genci_account.group_genci_enabled"
+    />
+</odoo>
