@@ -1,0 +1,1 @@
+from . import test_l10n_es_genci_stock_picking_report_valued

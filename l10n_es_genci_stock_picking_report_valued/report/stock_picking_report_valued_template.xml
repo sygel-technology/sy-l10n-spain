@@ -1,0 +1,72 @@
+<odoo>
+<!-- Copyright 2025 Angel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+    <template
+        id="l10n_es_genci_report_delivery_document"
+        inherit_id="stock_picking_report_valued.valued_report_picking"
+    >
+        <xpath expr="//span[@t-field='o.amount_untaxed']/../../../.." position="after">
+            <t
+                t-if="
+                    o.valued
+                    and o.sale_id
+                    and o.sale_id.is_genci
+                    and o.move_line_ids
+                    and is_outgoing
+                    and abs(o.genci_amount_total) >= o.currency_id.rounding
+                "
+            >
+                <table class="table table-sm mt32" name="genci_valued">
+                    <thead>
+                        <tr>
+                            <th class="text-end">
+                                <strong>GENCI Untaxed Amount</strong>
+                            </th>
+                            <th class="text-end">
+                                <strong>GENCI Taxes</strong>
+                            </th>
+                            <th class="text-end">
+                                <strong>Total GENCI</strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-end">
+                                <span t-field="o.genci_amount_subtotal" />
+                            </td>
+                            <td class="text-end">
+                                <span t-field="o.genci_amount_tax" />
+                            </td>
+                            <td class="text-end">
+                                <span t-field="o.genci_amount_total" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </xpath>
+    </template>
+    <template
+        id="l10n_es_genci_stock_report_delivery_line_genci"
+        inherit_id="stock.stock_report_delivery_has_serial_move_line"
+    >
+        <xpath expr="//span[@t-field='move_line.product_id']/.." position="inside">
+            <t
+                t-if="o.valued and o.sale_id and o.sale_id.is_genci and is_outgoing and move_line.genci_amount_total"
+            >
+                <br />
+                <span style="font-size: 70%; opacity: 0.7;">
+                    GENCI Contribution (RD 1055/2022):
+                    <span
+                        t-field="move_line.genci_amount_subtotal"
+                        t-options="{
+                            'widget': 'monetary',
+                            'display_currency': res_company.currency_id
+                        }"
+                    />
+                </span>
+            </t>
+        </xpath>
+    </template>
+</odoo>
