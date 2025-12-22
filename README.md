@@ -23,7 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 16.0.1.0.0 |  | PDF del model 303
 [l10n_es_genci_account](l10n_es_genci_account/) | 16.0.1.0.0 |  | Gestión tarifas GENCI
-[l10n_es_genci_purchase](l10n_es_genci_purchase/) | 16.0.1.0.0 |  | Gestión tarifas GENCI - Compras
+[l10n_es_genci_purchase](l10n_es_genci_purchase/) | 16.0.1.1.0 |  | Gestión tarifas GENCI - Compras
 
 [//]: # (end addons)
 
