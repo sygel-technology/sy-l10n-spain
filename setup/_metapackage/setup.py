@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo-addon-l10n_es_aeat_mod303_print>=16.0dev,<16.1dev',
         'odoo-addon-l10n_es_genci_account>=16.0dev,<16.1dev',
         'odoo-addon-l10n_es_genci_purchase>=16.0dev,<16.1dev',
+        'odoo-addon-l10n_es_genci_sale>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
