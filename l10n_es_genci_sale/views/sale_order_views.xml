@@ -1,0 +1,19 @@
+<odoo>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+    <record id="view_order_form_genci" model="ir.ui.view">
+        <field name="name">sale.order.form.genci</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+                <field name="genci_company" invisible="1" />
+                <field
+                    name="is_genci"
+                    attrs="{'readonly': [('state', '!=', 'draft')],
+                            'invisible': [('genci_company', '=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
