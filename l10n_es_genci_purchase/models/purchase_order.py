@@ -25,17 +25,10 @@ class PurchaseOrder(models.Model):
 
     @api.onchange("partner_id")
     def _onchange_partner_genci(self):
-        genci_product = self.env.ref("l10n_es_genci_account.product_genci_service")
         for order in self:
-            is_genci = False
-            if order.partner_id:
-                if order.partner_id.genci_subject:
-                    is_genci = True
-                else:
-                    order.order_line = order.order_line.filtered(
-                        lambda l: l.product_id != genci_product
-                    )
-            order.is_genci = is_genci
+            order.is_genci = (
+                order.partner_id.genci_subject if order.partner_id else False
+            )
 
     @api.constrains("order_line", "is_genci")
     def _check_genci_rules_dates(self):
@@ -70,7 +63,7 @@ class PurchaseOrder(models.Model):
     def manage_genci_order_lines(self):
         genci_product = self.env.ref("l10n_es_genci_account.product_genci_service")
         for order in self:
-            order._remove_genci_lines(genci_product)
+            order._remove_genci_lines()
             # Decide whether GENCI applies
             apply_genci = False
             if order.fiscal_position_id:
@@ -159,11 +152,11 @@ class PurchaseOrder(models.Model):
             "genci_amount": qty * rule.unit_price,
         }
 
-    def _remove_genci_lines(self, genci_product):
-        self.ensure_one()
-        genci_lines = self.order_line.filtered(lambda l: l.product_id == genci_product)
-        if genci_lines:
-            genci_lines.unlink()
+    def _remove_genci_lines(self):
+        genci_product = self.env.ref(
+            "l10n_es_genci_account.product_genci_service",
+        )
+        self.order_line.filtered(lambda l: l.product_id == genci_product).unlink()
 
     def apply_genci(self):
         target = self.filtered(lambda o: o.state in ["draft", "sent"] and o.is_genci)
@@ -185,7 +178,6 @@ class PurchaseOrder(models.Model):
         partner_changed = "partner_id" in vals
         is_genci_changed = "is_genci" in vals
         res = super().write(vals)
-        genci_product = self.env.ref("l10n_es_genci_account.product_genci_service")
         for order in self:
             if (
                 partner_changed
@@ -194,9 +186,7 @@ class PurchaseOrder(models.Model):
             ):
                 order.is_genci = True
             if is_genci_changed and not order.is_genci:
-                order.order_line.filtered(
-                    lambda l: l.product_id == genci_product
-                ).unlink()
+                order._remove_genci_lines()
         if partner_changed or is_genci_changed or "order_line" in vals:
             target = self.filtered(
                 lambda o: o.state in ["draft", "sent"] and o.is_genci
