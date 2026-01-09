@@ -1,0 +1,91 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_es_genci_stock_picking_report_valued
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-24 11:21+0000\n"
+"PO-Revision-Date: 2025-12-24 12:26+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_stock_picking_report_valued.l10n_es_genci_report_delivery_document
+msgid "<strong>GENCI Taxes</strong>"
+msgstr "<strong>Impuesto GENCI</strong>"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_stock_picking_report_valued.l10n_es_genci_report_delivery_document
+msgid "<strong>GENCI Untaxed Amount</strong>"
+msgstr "<strong>GENCI imponible</strong>"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_stock_picking_report_valued.l10n_es_genci_report_delivery_document
+msgid "<strong>Total GENCI</strong>"
+msgstr "<strong>Total GENCI</strong>"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model_terms:ir.ui.view,arch_db:l10n_es_genci_stock_picking_report_valued.l10n_es_genci_stock_report_delivery_line_genci
+msgid "GENCI Contribution (RD 1055/2022):"
+msgstr "GENCI Contribución (RD 1055/2022):"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_move_line__genci_amount_subtotal
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_picking__genci_amount_subtotal
+msgid "Genci Amount Subtotal"
+msgstr "Subtotal GENCI"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_move_line__genci_amount_tax
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_picking__genci_amount_tax
+msgid "Genci Amount Tax"
+msgstr "Impuesto Genci"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_move_line__genci_amount_total
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_picking__genci_amount_total
+msgid "Genci Amount Total"
+msgstr "Importe  GENCI"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_move_line__genci_rule_id
+msgid "Genci Rule"
+msgstr "Regla Genci"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_picking__genci_rule_summary
+msgid "Genci Rule Summary"
+msgstr "Resumen de reglas GENCI"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,field_description:l10n_es_genci_stock_picking_report_valued.field_stock_picking__picking_total_with_genci
+msgid "Picking Total With Genci"
+msgstr "Total del albarán con GENCI"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model,name:l10n_es_genci_stock_picking_report_valued.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de producto (línea de movimiento de stock)"
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model.fields,help:l10n_es_genci_stock_picking_report_valued.field_stock_picking__genci_rule_summary
+msgid ""
+"Summary of GENCI amounts per applied GENCI rule in the picking. Each entry "
+"contains the rule name and its untaxed amount, taxes, and total amount."
+msgstr ""
+"Resumen de los importes de GENCI por cada regla GENCI aplicada en el "
+"picking. Cada entrada contiene el nombre de la regla y su importe sin "
+"impuestos, los impuestos y el importe total."
+
+#. module: l10n_es_genci_stock_picking_report_valued
+#: model:ir.model,name:l10n_es_genci_stock_picking_report_valued.model_stock_picking
+msgid "Transfer"
+msgstr "Traslado"
