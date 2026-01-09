@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [l10n_es_genci_account](l10n_es_genci_account/) | 16.0.1.0.0 |  | Gestión tarifas GENCI
 [l10n_es_genci_purchase](l10n_es_genci_purchase/) | 16.0.1.1.0 |  | Gestión tarifas GENCI - Compras
 [l10n_es_genci_sale](l10n_es_genci_sale/) | 16.0.1.0.0 |  | Gestión tarifas GENCI - Ventas
+[l10n_es_genci_stock_picking_report_valued](l10n_es_genci_stock_picking_report_valued/) | 16.0.1.0.0 |  | Show GENCI amount in valued stock pickings
 
 [//]: # (end addons)
 
