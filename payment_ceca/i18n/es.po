@@ -1,0 +1,162 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_ceca
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-21 10:20+0000\n"
+"PO-Revision-Date: 2022-11-21 11:21+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: payment_ceca
+#: model:account.payment.method,name:payment_ceca.payment_method_ceca
+#: model:ir.model.fields.selection,name:payment_ceca.selection__payment_acquirer__provider__ceca
+#: model:payment.acquirer,name:payment_ceca.payment_acquirer_ceca
+msgid "Ceca"
+msgstr ""
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_acquirer_bin
+msgid "Ceca Acquirer Bin"
+msgstr "Código entidad CECA"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_business_name
+msgid "Ceca Business Name"
+msgstr "Nombre del negocio"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_encriptation_key
+msgid "Ceca Encriptation Key"
+msgstr "Clave de encriptación CECA"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_exponente
+msgid "Ceca Exponente"
+msgstr ""
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_merchant_id
+msgid "Ceca Merchant Id"
+msgstr "Código comercio CECA"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_terminal_id
+msgid "Ceca Terminal Id"
+msgstr "Identificador de terminal CECA"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_tipo_moneda
+msgid "Ceca Tipo Moneda"
+msgstr ""
+
+#. module: payment_ceca
+#: code:addons/payment_ceca/models/payment_transaction.py:0
+#, python-format
+msgid "Ceca: No transaction found matching reference %(ref)s."
+msgstr "CECA: No se encuentra la transacción con referencia %(ref)s."
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_force_apple
+msgid "Force Apple Pay"
+msgstr "Forzar Apple Pay"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_force_bizum
+msgid "Force Bizum"
+msgstr "Forzar Bizum"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_force_card
+msgid "Force Card"
+msgstr "Forzar Tarjeta"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__ceca_force_google
+msgid "Force Google Pay"
+msgstr "Forzar Google Pay"
+
+#. module: payment_ceca
+#: code:addons/payment_ceca/models/payment_acquirer.py:0
+#, python-format
+msgid "Only one payment mode can be forced."
+msgstr "Solo puede forzarse un modo de pago."
+
+#. module: payment_ceca
+#: model:ir.model,name:payment_ceca.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Método de Pago"
+
+#. module: payment_ceca
+#: model:ir.model,name:payment_ceca.model_account_payment_method
+msgid "Payment Methods"
+msgstr "Métodos de pago"
+
+#. module: payment_ceca
+#: model:ir.model,name:payment_ceca.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transacción de pago"
+
+#. module: payment_ceca
+#: model:ir.model.fields,field_description:payment_ceca.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "Proveedor"
+
+#. module: payment_ceca
+#: code:addons/payment_ceca/models/payment_transaction.py:0
+#, python-format
+msgid "Ceca: Received data with missing Num_operacion"
+msgstr "CECA: Se ha recibidio información sin Num_operacion"
+
+#. module: payment_ceca
+#: model:ir.actions.server,name:payment_ceca.cron_sqs_ceca_action_run_ir_actions_server
+#: model:ir.cron,cron_name:payment_ceca.cron_sqs_ceca_action_run
+#: model:ir.cron,name:payment_ceca.cron_sqs_ceca_action_run
+msgid "SQS Payment Transaction Ceca Action Run"
+msgstr ""
+
+#. module: payment_ceca
+#: model:ir.model.fields,help:payment_ceca.field_payment_acquirer__provider
+msgid "The Payment Service Provider to use with this acquirer"
+msgstr "El proveedor de servicios de pago a utilizar con este adquirente"
+
+#. module: payment_ceca
+#: code:addons/payment_ceca/models/payment_transaction.py:0
+#, python-format
+msgid "The customer has selected {} to make the payment."
+msgstr "El cliente ha seleccionado {} para hacer el pago."
+
+#. module: payment_ceca
+#: code:addons/payment_ceca/models/payment_transaction.py:0
+#, python-format
+msgid "Ceca: Transaction %(ref)s could not be validated."
+msgstr "La transacción {} no se pudo validar."
+
+#. module: payment_ceca
+#: model_terms:payment.acquirer,auth_msg:payment_ceca.payment_acquirer_ceca
+msgid "Your payment has been authorized."
+msgstr "Su pago ha sido autorizado."
+
+#. module: payment_ceca
+#: model_terms:payment.acquirer,cancel_msg:payment_ceca.payment_acquirer_ceca
+msgid "Your payment has been cancelled. Please, try again."
+msgstr "Su pago ha sido cancelado. Por favor, vuévalo a intentar."
+
+#. module: payment_ceca
+#: model_terms:payment.acquirer,pending_msg:payment_ceca.payment_acquirer_ceca
+msgid "Your payment has been successfully processed but is waiting for approval."
+msgstr "Su pago ha sido correctamente procesado pero está pendiente de aprobación."
+
+#. module: payment_ceca
+#: model_terms:payment.acquirer,done_msg:payment_ceca.payment_acquirer_ceca
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr "Su pago se ha procesado correctamente. ¡Gracias!"

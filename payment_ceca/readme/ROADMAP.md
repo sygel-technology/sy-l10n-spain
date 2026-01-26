@@ -1,0 +1,3 @@
+- It only works with serial numbers, not lots.
+- Unit tests should be added in the next versions of this module
+- The payment acquirer has fields written in spanish. That sould be changed in the next versions of this module.

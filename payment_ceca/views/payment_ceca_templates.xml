@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="ceca_acquirer_button">
+        <form
+            t-att-action="api_url"
+            method="post"
+            target="_self"
+            enctype="application/x-www-form-urlencoded"
+        >
+            <input type="hidden" name="MerchantID" t-att-value="MerchantID" />
+            <input type="hidden" name="AcquirerBIN" t-att-value="AcquirerBIN" />
+            <input type="hidden" name="TerminalID" t-att-value="TerminalID" />
+            <input type="hidden" name="Exponente" t-att-value="Exponente" />
+            <input type="hidden" name="TipoMoneda" t-att-value="TipoMoneda" />
+            <input type="hidden" name="URL_OK" t-att-value="URL_OK" />
+            <input type="hidden" name="URL_NOK" t-att-value="URL_NOK" />
+            <input type="hidden" name="Num_operacion" t-att-value="Num_operacion" />
+            <input type="hidden" name="Importe" t-att-value="Importe" />
+            <input type="hidden" name="Idioma" t-att-value="Idioma" />
+            <input type="hidden" name="Pago_soportado" t-att-value="Pago_soportado" />
+            <input type="hidden" name="Descripcion" t-att-value="Descripcion" />
+            <input type="hidden" name="Firma" t-att-value="Firma" />
+            <input type="hidden" name="Cifrado" t-att-value="Cifrado" />
+            <input type="hidden" name="inicioTarjeta" t-att-value="inicioTarjeta" />
+            <input type="hidden" name="inicioBizum" t-att-value="inicioBizum" />
+            <input type="hidden" name="inicioGoogle" t-att-value="inicioGoogle" />
+            <input type="hidden" name="inicioApple" t-att-value="inicioApple" />
+            <button type="submit" width="100px" t-att-class="submit_class">
+                <img
+                    t-if="not submit_txt"
+                    src="/payment_ceca/static/src/img/ceca_icon.png"
+                />
+                <span t-if="submit_txt"><t t-esc="submit_txt" /> <span
+                        class="fa fa-long-arrow-right"
+                    /></span>
+            </button>
+        </form>
+    </template>
+</odoo>
