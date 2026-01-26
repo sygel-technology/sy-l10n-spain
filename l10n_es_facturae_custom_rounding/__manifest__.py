@@ -4,7 +4,7 @@
 {
     "name": "Facturae - Custom Rounding",
     "summary": "Set right values in Facturae when using custom rounding in invoice.",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.3",
     "category": "Invoicing",
     "website": "https://github.com/sygel-technology/sy-l10n-spain",
     "author": "Sygel, Odoo Community Association (OCA)",
