@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ==========================
 Facturae - Custom Rounding
 ==========================
@@ -13,7 +17,7 @@ Facturae - Custom Rounding
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-sygel--technology%2Fsy--l10n--spain-lightgray.png?logo=github
@@ -38,12 +42,12 @@ l10n_es_facturae and account_invoice_custom_rounding modules compatible.
 Configuration
 =============
 
-- No configuration needed.
+-  No configuration needed.
 
 Usage
 =====
 
-- No usage instructions needed.
+-  No usage instructions needed.
 
 Bug Tracker
 ===========
@@ -66,11 +70,11 @@ Authors
 Contributors
 ------------
 
-- `Sygel <https://www.sygel.es>`__:
+-  `Sygel <https://www.sygel.es>`__:
 
-  - Manuel Regidor <manuel.regidor@sygel.es>
-  - Harald Panten <harald.panten@sygel.es>
-  - Valentín Vinagre <valentin.vinagre@sygel.es>
+   -  Manuel Regidor <manuel.regidor@sygel.es>
+   -  Harald Panten <harald.panten@sygel.es>
+   -  Valentín Vinagre <valentin.vinagre@sygel.es>
 
 Maintainers
 -----------

@@ -5,7 +5,7 @@ import base64
 
 from lxml import etree
 
-from odoo.addons.account_invoice_custom_rounding.tests.test_account_invoice_custom_rounding import (  # noqa: E501
+from odoo.addons.account_invoice_custom_rounding.tests.test_account_invoice_custom_rounding import (  # noqa: B950
     TestAccountInvoiceCustomRounding,
 )
 
