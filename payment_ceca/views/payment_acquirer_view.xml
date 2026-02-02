@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="acquirer_form_ceca" model="ir.ui.view">
+        <field name="name">acquirer.form.ceca</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.payment_acquirer_form" />
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group attrs="{'invisible': [('provider', '!=', 'ceca')]}">
+                    <group>
+                        <field
+                            name="ceca_acquirer_bin"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                        <field
+                            name="ceca_merchant_id"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                        <field
+                            name="ceca_terminal_id"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                        <field
+                            name="ceca_business_name"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                        <field
+                            name="ceca_encriptation_key"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                        <field
+                            name="ceca_exponente"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                        <field
+                            name="ceca_tipo_moneda"
+                            attrs="{'required': [('provider', '=', 'ceca')]}"
+                        />
+                    </group>
+                    <group>
+                        <field name="ceca_force_bizum" />
+                        <field name="ceca_force_card" />
+                        <field name="ceca_force_google" />
+                        <field name="ceca_force_apple" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

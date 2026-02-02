@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="payment_acquirer_ceca" model="payment.acquirer">
+        <field name="name">Ceca</field>
+        <field name="provider">ceca</field>
+        <field
+            name="image_128"
+            type="base64"
+            file="payment_ceca/static/src/img/ceca_icon.png"
+        />
+        <field name="description" type="html">
+            <p>
+                CECA Virtual TPV.
+            </p>
+        </field>
+        <field name="redirect_form_view_id" ref="ceca_acquirer_button" />
+        <field name="ceca_acquirer_bin">XXXXXXXXXX</field>
+        <field name="ceca_merchant_id">XXXXXXXXXX</field>
+        <field name="ceca_terminal_id">XXXXXXXXXX</field>
+        <field name="ceca_business_name">XXXXX</field>
+        <field name="ceca_encriptation_key">XXXXXXXX</field>
+        <field name="ceca_exponente">0</field>
+        <field name="ceca_tipo_moneda">0</field>
+    </record>
+    <record id="payment_method_ceca" model="account.payment.method">
+        <field name="name">Ceca</field>
+        <field name="code">ceca</field>
+        <field name="payment_type">inbound</field>
+    </record>
+</odoo>
