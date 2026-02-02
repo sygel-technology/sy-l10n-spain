@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 15.0.1.0.0 |  | PDF del model 303
 [l10n_es_facturae_custom_rounding](l10n_es_facturae_custom_rounding/) | 15.0.1.0.3 |  | Set right values in Facturae when using custom rounding in invoice.
+[payment_ceca](payment_ceca/) | 15.0.1.0.0 |  | Ceca Payment Acquirer
 
 [//]: # (end addons)
 
