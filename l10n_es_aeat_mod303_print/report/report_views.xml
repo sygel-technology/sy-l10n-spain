@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <report
         id="act_report_aeat_mod303_pdf"
         model="l10n.es.aeat.mod303.report"
@@ -10,5 +9,4 @@
         file="l10n_es_aeat_mod303_print.report_l10n_es_mod303"
         attachment_use="False"
     />
-
 </odoo>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <template id="report_aeat_mod303_document">
         <t t-call="web.external_layout">
             <div class="page">
@@ -75,8 +74,8 @@
                                 </td>
                                 <td class="td_detail_table">
                                     <span t-field="o.date_start" /> - <span
-                                        t-field="o.date_end"
-                                    />
+                                    t-field="o.date_end"
+                                />
                                 </td>
                             </tr>
                             <tr>
@@ -95,12 +94,12 @@
                                     <span t-field="o.journal_id" />
                                 </td>
                             </tr>
-                                <td class="td_detail_table">
+                            <td class="td_detail_table">
                                     Counterpart Account:
                                 </td>
-                                <td class="td_detail_table">
-                                    <span t-field="o.counterpart_account_id" />
-                                </td>
+                            <td class="td_detail_table">
+                                <span t-field="o.counterpart_account_id" />
+                            </td>
                             <tr>
                                 <td class="td_detail_table">
                                     L.R. VAT Number:
@@ -280,7 +279,9 @@
                                     <b>[71] Settlement Result:</b>
                                 </td>
                                 <td class="td_detail_table">
-                                    <b><span t-field="o.resultado_liquidacion" /></b>
+                                    <b>
+                                        <span t-field="o.resultado_liquidacion" />
+                                    </b>
                                 </td>
                             </tr>
                             <tr>
@@ -288,7 +289,9 @@
                                     <b>Result Type:</b>
                                 </td>
                                 <td class="td_detail_table">
-                                    <b><span t-field="o.result_type" /></b>
+                                    <b>
+                                        <span t-field="o.result_type" />
+                                    </b>
                                 </td>
                             </tr>
                         </tbody>
@@ -333,5 +336,4 @@
             </t>
         </t>
     </template>
-
 </odoo>
