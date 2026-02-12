@@ -13,8 +13,7 @@
     padding-right: 5%;
 }
                 </style>
-                <div class="oe_structure" />
-                <div class="text-center" id="title">
+                <div class="text-center" id="title" style="padding-top: 42px;">
                     <h4>Modelo 303. IVA. Autoliquidación.</h4>
                 </div>
                 <div id="mod303_summary_div">

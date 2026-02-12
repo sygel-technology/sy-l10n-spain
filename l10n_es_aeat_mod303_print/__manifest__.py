@@ -4,10 +4,10 @@
 {
     "name": "AEAT Modelo 303 Imprimir",
     "summary": "PDF del model 303",
-    "version": "16.0.1.0.0",
-    "category": "Uncategorized",
+    "version": "18.0.1.0.0",
+    "category": "Accounting",
     "website": "https://github.com/sygel-technology/sy-l10n-spain",
-    "author": "Sygel, Odoo Community Association (OCA)",
+    "author": "Sygel",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
