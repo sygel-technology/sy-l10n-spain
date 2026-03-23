@@ -1,0 +1,223 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_es_aeat_mod303_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-07 08:50+0000\n"
+"PO-Revision-Date: 2020-05-07 10:59+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "<b>Result Type:</b>"
+msgstr "<b>Tipo de resultado:</b>"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "<b>[71] Settlement Result:</b>"
+msgstr "<b>[71] [71] Result. liquidación:</b>"
+
+#. module: l10n_es_aeat_mod303_print
+#: model:ir.actions.report,name:l10n_es_aeat_mod303_print.act_report_aeat_mod303_pdf
+msgid "AEAT Model 303"
+msgstr "AEAT Modelo 303"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Amount"
+msgstr "Importe"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Bank Account:"
+msgstr "Cuenta bancaria:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Calculation Date:"
+msgstr "Fecha de cálculo"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Company:"
+msgstr "Empresa:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Contact Info"
+msgstr "Información de contacto:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Contact Phone:"
+msgstr "Teléfono de contacto:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Counterpart Account:"
+msgstr "Cuenta compartida:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Dates:"
+msgstr "Fechas:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Declaration"
+msgstr "Declaración"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Email:"
+msgstr "Correo electrónico:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Export Config:"
+msgstr "Configuración de exportación:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Field Number"
+msgstr "Número de campo"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Full Name:"
+msgstr "Nombre completo:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Journal:"
+msgstr "Diario:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "L.R. VAT Number:"
+msgstr "L.R. IVA número:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Modelo 303. IVA. Autoliquidación."
+msgstr "Modelo 303. IVA. Autoliquidación."
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Monthly Return:"
+msgstr "Devolución mensual:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "No"
+msgstr "No"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Period Type:"
+msgstr "Tipo de periodo:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Report:"
+msgstr "Informe:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Result"
+msgstr "Resultado"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Statement Type:"
+msgstr "Tipo de declaración:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Support Type:"
+msgstr "TIpo de soporte:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Tax Lines"
+msgstr "Líneas de impuestos"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "VAT Number:"
+msgstr "Número IVA:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Year:"
+msgstr "Año"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "Yes"
+msgstr "Sí"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[27] VAT Payable:"
+msgstr "[27] IVA devengado:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[45] VAT Receivable:"
+msgstr "[45] IVA a deducir:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[46] General Scheme Result:"
+msgstr "[46] Resultado Régimen General:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[65] % Attributable to State:"
+msgstr "[65] % atribuible al Estado:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[66] Attributable to the Administration:"
+msgstr "[66] Atribuible a la Administración:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[67] Fees to Compensate:"
+msgstr "[67] Cuotas a compensar:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[68] Annual Regularization:"
+msgstr "[68] Regularización anual:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[69] Result:"
+msgstr "[69] Resultado:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[70] To Be Deducted:"
+msgstr "[70] A deducir:"
+
+#. module: l10n_es_aeat_mod303_print
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod303_print.report_aeat_mod303_document
+msgid "[77] VAT Deferred (Settle by Customs):"
+msgstr "[77] Iva Diferido (Liquidado por aduana):"
