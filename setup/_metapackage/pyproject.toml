@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-sygel-technology-sy-l10n-spain"
+version = "18.0.20260323.0"
+dependencies = [
+    "odoo-addon-l10n_es_aeat_mod303_print==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]

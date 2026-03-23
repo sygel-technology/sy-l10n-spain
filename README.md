@@ -16,6 +16,13 @@ Odoo Project Management and Services Company Addons
 <!-- prettier-ignore-start -->
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[l10n_es_aeat_mod303_print](l10n_es_aeat_mod303_print/) | 18.0.1.0.0 |  | PDF del model 303
+
 [//]: # (end addons)
 
 <!-- prettier-ignore-end -->
