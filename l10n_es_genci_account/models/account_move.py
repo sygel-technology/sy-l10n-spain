@@ -98,19 +98,24 @@ class AccountMove(models.Model):
                         )
                         % {"product": genci_product.display_name}
                     )
-                sequence += 1
-                genci_vals_list.append(
-                    {
-                        "move_id": move.id,
-                        "product_id": genci_product.id,
-                        "quantity": total_qty,
-                        "price_unit": rule.unit_price,
-                        "purchase_price": rule.unit_price,
-                        "name": f"GENCI: {rule.name}",
-                        "account_id": genci_account.id,
-                        "sequence": sequence,
-                    }
+                sale_lines = move._get_genci_sale_lines_by_rule(
+                    genci_source_lines, rule
                 )
+                sequence += 1
+                vals = {
+                    "move_id": move.id,
+                    "product_id": genci_product.id,
+                    "quantity": total_qty,
+                    "price_unit": rule.unit_price,
+                    "purchase_price": rule.unit_price,
+                    "name": f"GENCI: {rule.name}",
+                    "account_id": genci_account.id,
+                    "sequence": sequence,
+                    "genci_rule_id": rule.id,
+                }
+                if sale_lines:
+                    vals["sale_line_ids"] = [(6, 0, sale_lines.ids)]
+                genci_vals_list.append(vals)
             if genci_vals_list:
                 move.env["account.move.line"].create(genci_vals_list)
 
@@ -145,3 +150,23 @@ class AccountMove(models.Model):
         moves = super().create(vals_list)
         moves.apply_genci()
         return moves
+
+    @api.model
+    def _get_genci_sale_lines_by_rule(self, genci_source_lines, rule):
+        """Return sale lines related to invoice lines for the given GENCI rule."""
+        sale_lines = False
+        if (
+            "sale.order.line" in self.env
+            and "sale_line_ids" in self.env["account.move.line"]._fields
+        ):
+            source_lines = genci_source_lines.filtered(
+                lambda l: (
+                    (
+                        l.product_id.genci_rule_id
+                        or l.product_id.product_tmpl_id.genci_rule_id
+                    )
+                    == rule
+                )
+            )
+            sale_lines = source_lines.mapped("sale_line_ids")
+        return sale_lines

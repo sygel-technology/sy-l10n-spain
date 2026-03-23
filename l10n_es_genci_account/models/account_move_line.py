@@ -13,3 +13,9 @@ class AccountMoveLine(models.Model):
         readonly=True,
         help="GENCI contribution corresponding to this product line.",
     )
+    genci_rule_id = fields.Many2one(
+        comodel_name="genci.rule",
+        string="GENCI Rule",
+        readonly=True,
+        help="GENCI rule used to generate this invoice line.",
+    )

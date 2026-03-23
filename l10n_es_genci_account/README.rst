@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ==========
 Tasa Genci
 ==========
@@ -13,7 +17,7 @@ Tasa Genci
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-sygel--technology%2Fsy--l10n--spain-lightgray.png?logo=github
@@ -123,6 +127,22 @@ Pending Features:
   on product.template from a selection (yes/no) to a Boolean is_genci
   field for simplicity and consistency in the code.
 
+- **GENCI lines grouping by picking:** Currently, GENCI lines are not
+  distributed per picking in multi-delivery scenarios. Instead, they are
+  linked to the first available picking via ``sale_line_ids``, which
+  avoids showing them under "No reference" in reports.
+
+  A proper distribution per picking would require leveraging the method
+  ``lines_grouped_by_picking``, which is provided by the module
+  ``account_invoice_report_grouped_by_picking``.
+
+  To avoid introducing an additional dependency in this module, the
+  current implementation keeps a simpler approach.
+
+  If a more accurate distribution per picking is required in the future,
+  it is recommended to implement it in a separate integration module
+  that depends on ``account_invoice_report_grouped_by_picking``.
+
 Bug Tracker
 ===========
 
@@ -148,6 +168,7 @@ Contributors
 
   - Ángel Rivas
   - Valentín Vinagre
+  - Harald Panten
 
 Maintainers
 -----------

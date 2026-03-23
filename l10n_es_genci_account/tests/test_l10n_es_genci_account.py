@@ -382,3 +382,15 @@ class TestL10nEsAccountGenci(TransactionCase):
             expected_amount,
             "The genci_amount was not calculated correctly.",
         )
+
+    def test_get_genci_sale_lines_by_rule_returns_false_without_sale(self):
+        move = self.env["account.move"]
+        genci_source_lines = self.env["account.move.line"]
+        sale_lines = move._get_genci_sale_lines_by_rule(
+            genci_source_lines, self.genci_rule
+        )
+        self.assertFalse(
+            sale_lines,
+            "_get_genci_sale_lines_by_rule should return False "
+            "when sale integration is not available.",
+        )
