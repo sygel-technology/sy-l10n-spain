@@ -43,7 +43,6 @@ class AccountMove(models.Model):
     def manage_genci_invoice_lines(self):
         """Manage GENCI lines, always adding them at the end of the invoice."""
         genci_product = self.env.ref("l10n_es_genci_account.product_genci_service")
-
         for move in self:
             # Remove existing GENCI lines in the invoice
             genci_invoice_lines = move.line_ids.filtered(
@@ -100,19 +99,32 @@ class AccountMove(models.Model):
                     )
                 sequence += 1
                 genci_vals_list.append(
-                    {
-                        "move_id": move.id,
-                        "product_id": genci_product.id,
-                        "quantity": total_qty,
-                        "price_unit": rule.unit_price,
-                        "purchase_price": rule.unit_price,
-                        "name": f"GENCI: {rule.name}",
-                        "account_id": genci_account.id,
-                        "sequence": sequence,
-                    }
+                    move._prepare_genci_invoice_line_vals(
+                        move=move,
+                        genci_product=genci_product,
+                        rule=rule,
+                        total_qty=total_qty,
+                        genci_account=genci_account,
+                        sequence=sequence,
+                    )
                 )
             if genci_vals_list:
                 move.env["account.move.line"].create(genci_vals_list)
+
+    def _prepare_genci_invoice_line_vals(
+        self, move, genci_product, rule, total_qty, genci_account, sequence
+    ):
+        """Prepare values for a generated GENCI invoice line."""
+        return {
+            "move_id": move.id,
+            "product_id": genci_product.id,
+            "quantity": total_qty,
+            "price_unit": rule.unit_price,
+            "purchase_price": rule.unit_price,
+            "name": f"GENCI: {rule.name}",
+            "account_id": genci_account.id,
+            "sequence": sequence,
+        }
 
     def apply_genci(self):
         draft_moves = self.filtered(lambda m: m.state == "draft" and m.is_genci)
