@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Alberto Martínez <alberto.martinez@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+
+    <record id="group_account_move_manual_sii_result_wizard" model="res.groups">
+        <field name="name">Account Move SII Manual Result Wizard User</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+        <field name="comment">
+            The user will be able to use the account.move.sii.manual.result.wizard
+        </field>
+        <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+    </record>
+
+</odoo>

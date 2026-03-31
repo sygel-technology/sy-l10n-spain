@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Alberto Martínez <alberto.martinez@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record
+        model="ir.actions.server"
+        id="account_move_manual_sii_result_wizard_server_action"
+    >
+        <field name="name">Edit SII Result Values</field>
+        <field name="model_id" ref="account.model_account_move" />
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = records.action_account_move_manual_sii_result_wizard()
+        </field>
+    </record>
+
+</odoo>
