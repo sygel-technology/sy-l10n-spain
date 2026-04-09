@@ -16,6 +16,13 @@ Odoo Project Management and Services Company Addons
 <!-- prettier-ignore-start -->
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[sy_l10n_es_aeat_sii_oca_manual_result](sy_l10n_es_aeat_sii_oca_manual_result/) | 17.0.1.0.0 |  | Adds a wizard to edit Sii fields values on invoices
+
 [//]: # (end addons)
 
 <!-- prettier-ignore-end -->
