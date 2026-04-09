@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Alberto Martínez <alberto.martinez@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="account_move_manual_sii_result_wizard_form" model="ir.ui.view">
+        <field name="name">account.move.manual.sii.result.wizard.form</field>
+        <field name="model">account.move.manual.sii.result.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="has_warn" invisible="True" />
+                    <field
+                        name="warn"
+                        invisible="not has_warn"
+                        class="alert alert-warning"
+                    />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <label for="aeat_send_failed" />
+                            <div class="o_row">
+                                <field
+                                    name="aeat_send_failed"
+                                    nolabel="1"
+                                    invisible="set_aeat_send_failed == 'ignore'"
+                                />
+                            </div>
+                            <label for="aeat_state" />
+                            <div class="o_row">
+                                <field
+                                    name="aeat_state"
+                                    nolabel="1"
+                                    required="set_aeat_state == 'set'"
+                                    invisible="set_aeat_state == 'ignore'"
+                                />
+                            </div>
+                            <label for="sii_csv" />
+                            <div class="o_row">
+                                <field
+                                    name="sii_csv"
+                                    nolabel="1"
+                                    invisible="set_sii_csv == 'ignore'"
+                                />
+                            </div>
+                            <label for="aeat_send_error" />
+                            <div class="o_row">
+                                <field
+                                    name="aeat_send_error"
+                                    nolabel="1"
+                                    invisible="set_aeat_send_error == 'ignore'"
+                                />
+                            </div>
+                        </group>
+                        <group>
+                        <!-- Easiest way to align the fields to write with their control fields is splitting them into 2 groups and keeping the same order-->
+                            <field
+                                name="set_aeat_send_failed"
+                                nolabel="1"
+                                colspan="2"
+                            />
+                            <field name="set_aeat_state" nolabel="1" colspan="2" />
+                            <field name="set_sii_csv" nolabel="1" colspan="2" />
+                            <field name="set_aeat_send_error" nolabel="1" colspan="2" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="moves" string="Moves">
+                            <field
+                                name="editable_move_ids"
+                                nolabel="True"
+                                readonly="True"
+                            >
+                                <tree>
+                                    <field name="name" />
+                                    <field name="invoice_partner_display_name" />
+                                    <field name="invoice_date" optional="hide" />
+                                    <field name="aeat_send_failed" />
+                                    <field name="aeat_state" />
+                                    <field name="sii_csv" />
+                                    <field name="aeat_send_error" optional="show" />
+                                    <field name="payment_state" optional="hide" />
+                                    <field name="state" optional="hide" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button
+                        name="action_accept"
+                        type="object"
+                        string="Accept"
+                        class="oe_highlight"
+                    />
+                    or
+                    <button special="cancel" string="Cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

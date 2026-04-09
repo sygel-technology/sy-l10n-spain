@@ -1,0 +1,245 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sy_l10n_es_aeat_sii_oca_manual_result
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-08 15:48+0000\n"
+"PO-Revision-Date: 2026-04-08 15:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:res.groups,comment:sy_l10n_es_aeat_sii_oca_manual_result.group_account_move_manual_sii_result_wizard
+msgid ""
+"\n"
+"            The user will be able to use the account.move.sii.manual.result.wizard\n"
+"        "
+msgstr ""
+"\n"
+"            El usuario podrá usar el account.move.sii.manual.result.wizard\n"
+"        "
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__aeat_send_error
+msgid "AEAT Send Error"
+msgstr "Error de envío a la AEAT"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__aeat_state
+msgid "AEAT send state"
+msgstr "Estado de envío a la AEAT"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model_terms:ir.ui.view,arch_db:sy_l10n_es_aeat_sii_oca_manual_result.account_move_manual_sii_result_wizard_form
+msgid "Accept"
+msgstr "Aceptar"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__aeat_state__sent_w_errors
+msgid "Accepted with errors"
+msgstr "Aceptada con errores"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:res.groups,name:sy_l10n_es_aeat_sii_oca_manual_result.group_account_move_manual_sii_result_wizard
+msgid "Account Move SII Manual Result Wizard User"
+msgstr "Usuario del asistente de resultados manuales del SII"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model_terms:ir.ui.view,arch_db:sy_l10n_es_aeat_sii_oca_manual_result.account_move_manual_sii_result_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__aeat_state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__aeat_state__cancelled_modified
+msgid "Cancelled in SII but last modifications not sent"
+msgstr "Anulada en SII con modificaciones pendientes de comunicar"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.actions.server,name:sy_l10n_es_aeat_sii_oca_manual_result.account_move_manual_sii_result_wizard_server_action
+msgid "Edit SII Result Values"
+msgstr "Editar los valores resultantes del SII"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#. odoo-python
+#: code:addons/sy_l10n_es_aeat_sii_oca_manual_result/models/account_move.py:0
+#, python-format
+msgid "Edit SII Result Values Wizard"
+msgstr "Asistente para editar los valores resultantes del SII"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__editable_move_ids
+msgid "Editable Move"
+msgstr "Movimientos editables"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__has_warn
+msgid "Has Warn"
+msgstr "Tiene aviso"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_aeat_send_error__ignore
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_aeat_send_failed__ignore
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_aeat_state__ignore
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_sii_csv__ignore
+msgid "Ignore"
+msgstr "Ignorar"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,help:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__aeat_send_failed
+msgid ""
+"Indicates that the last attempt to communicate this document to the SII has "
+"failed. See SII return for details"
+msgstr ""
+"Indica que ha fallado el último intento de comunicar este documento al SII. "
+"Véase la devolución del SII para más detalles"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,help:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__aeat_state
+msgid ""
+"Indicates the state of this document in relation with the presentation at "
+"the AEAT"
+msgstr ""
+"Indica el estado de este documento en relación con la presentación en la "
+"AEAT"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model,name:sy_l10n_es_aeat_sii_oca_manual_result.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model_terms:ir.ui.view,arch_db:sy_l10n_es_aeat_sii_oca_manual_result.account_move_manual_sii_result_wizard_form
+msgid "Moves"
+msgstr "Movimientos"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#. odoo-python
+#: code:addons/sy_l10n_es_aeat_sii_oca_manual_result/models/account_move.py:0
+#, python-format
+msgid ""
+"None of the selected moves can be edited because they are not invoices "
+"subject to the SII"
+msgstr ""
+"Ninguno de los movimientos seleccionados se puede editar porque no son "
+"facturas sujetas al SII"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__aeat_state__not_sent
+msgid "Not sent"
+msgstr "No enviado"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__aeat_state__sent_modified
+msgid "Registered in SII but last modifications not sent"
+msgstr "Registro correcto en SII con modificaciones pendientes de comunicar"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__sii_csv
+msgid "SII CSV"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__aeat_send_failed
+msgid "SII send failed"
+msgstr "Envío SII fallido"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__aeat_state__sent
+msgid "Sent"
+msgstr "Enviada"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_aeat_send_error__set
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_aeat_send_failed__set
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_aeat_state__set
+#: model:ir.model.fields.selection,name:sy_l10n_es_aeat_sii_oca_manual_result.selection__account_move_manual_sii_result_wizard__set_sii_csv__set
+msgid "Set"
+msgstr "Establecer"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__set_aeat_send_error
+msgid "Set Aeat Send Error"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__set_aeat_send_failed
+msgid "Set Aeat Send Failed"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__set_aeat_state
+msgid "Set Aeat State"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__set_sii_csv
+msgid "Set Sii Csv"
+msgstr ""
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#. odoo-python
+#: code:addons/sy_l10n_es_aeat_sii_oca_manual_result/wizards/account_move_manual_sii_result_wizard.py:0
+#, python-format
+msgid ""
+"The following moves cannot be edited because they are not invoices subject "
+"to the SII: %(moves)s"
+msgstr ""
+"Las siguientes facturas no se pueden editar porque no son facturas sujetas "
+"al SII: %(moves)s"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model.fields,field_description:sy_l10n_es_aeat_sii_oca_manual_result.field_account_move_manual_sii_result_wizard__warn
+msgid "Warn"
+msgstr "Aviso"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model:ir.model,name:sy_l10n_es_aeat_sii_oca_manual_result.model_account_move_manual_sii_result_wizard
+msgid "Wizard to edit Sii state in moves"
+msgstr "Asistente para editar el estado del SII en las facturas"
+
+#. module: sy_l10n_es_aeat_sii_oca_manual_result
+#: model_terms:ir.ui.view,arch_db:sy_l10n_es_aeat_sii_oca_manual_result.account_move_manual_sii_result_wizard_form
+msgid "or"
+msgstr "o"
