@@ -326,3 +326,117 @@ class TestL10nEsGenciSale(TransactionCase):
             expected_amount,
             "The genci_amount of the original line was not calculated correctly.",
         )
+
+    def test_sale_order_line_create_syncs_genci_lines(self):
+        genci_service = self.env.ref("l10n_es_genci_account.product_genci_service")
+        order = self.env["sale.order"].create(
+            {
+                "partner_id": self.partner.id,
+                "company_id": self.company.id,
+                "date_order": date.today(),
+                "is_genci": True,
+            }
+        )
+
+        self.env["sale.order.line"].create(
+            {
+                "order_id": order.id,
+                "product_id": self.product.id,
+                "product_uom_qty": 2,
+                "price_unit": 10.0,
+            }
+        )
+
+        genci_lines = order.order_line.filtered(lambda l: l.product_id == genci_service)
+        self.assertEqual(len(genci_lines), 1)
+        self.assertEqual(genci_lines.product_uom_qty, 2)
+        self.assertEqual(genci_lines.price_unit, self.rule_valid.unit_price)
+
+    def test_sale_order_line_write_updates_genci_lines(self):
+        genci_service = self.env.ref("l10n_es_genci_account.product_genci_service")
+        order = self.env["sale.order"].create(
+            {
+                "partner_id": self.partner.id,
+                "company_id": self.company.id,
+                "date_order": date.today(),
+                "is_genci": True,
+                "order_line": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": self.product.id,
+                            "product_uom_qty": 1,
+                            "price_unit": 10.0,
+                        },
+                    )
+                ],
+            }
+        )
+        product_line = order.order_line.filtered(lambda l: l.product_id == self.product)
+        product_line.write({"product_uom_qty": 3})
+        genci_lines = order.order_line.filtered(lambda l: l.product_id == genci_service)
+        self.assertEqual(len(genci_lines), 1)
+        self.assertEqual(genci_lines.product_uom_qty, 3)
+        self.assertEqual(product_line.genci_amount, 30.0)
+
+    def test_sale_order_line_unlink_removes_genci_line(self):
+        genci_service = self.env.ref("l10n_es_genci_account.product_genci_service")
+        order = self.env["sale.order"].create(
+            {
+                "partner_id": self.partner.id,
+                "company_id": self.company.id,
+                "date_order": date.today(),
+                "is_genci": True,
+                "order_line": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": self.product.id,
+                            "product_uom_qty": 1,
+                            "price_unit": 10.0,
+                        },
+                    )
+                ],
+            }
+        )
+        product_line = order.order_line.filtered(lambda l: l.product_id == self.product)
+        product_line.unlink()
+        genci_lines = order.order_line.filtered(lambda l: l.product_id == genci_service)
+        self.assertFalse(
+            genci_lines,
+            "GENCI line should be removed when the source line is deleted.",
+        )
+
+    def test_sale_order_line_write_does_not_duplicate_genci_lines(self):
+        genci_service = self.env.ref("l10n_es_genci_account.product_genci_service")
+        order = self.env["sale.order"].create(
+            {
+                "partner_id": self.partner.id,
+                "company_id": self.company.id,
+                "date_order": date.today(),
+                "is_genci": True,
+                "order_line": [
+                    (
+                        0,
+                        0,
+                        {
+                            "product_id": self.product.id,
+                            "product_uom_qty": 1,
+                            "price_unit": 10.0,
+                        },
+                    )
+                ],
+            }
+        )
+        product_line = order.order_line.filtered(lambda l: l.product_id == self.product)
+        product_line.write({"product_uom_qty": 2})
+        product_line.write({"product_uom_qty": 4})
+        genci_lines = order.order_line.filtered(lambda l: l.product_id == genci_service)
+        self.assertEqual(
+            len(genci_lines),
+            1,
+            "GENCI line should be updated, not duplicated.",
+        )
+        self.assertEqual(genci_lines.product_uom_qty, 4)
