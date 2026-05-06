@@ -62,9 +62,8 @@ class SaleOrder(models.Model):
 
     def manage_genci_order_lines(self):
         genci_product = self.env.ref("l10n_es_genci_account.product_genci_service")
+        sol_model = self.env["sale.order.line"]
         for order in self:
-            order._remove_genci_lines()
-            # Decide whether GENCI applies
             if order.fiscal_position_id:
                 apply_genci = order.fiscal_position_id.genci_subject
             else:
@@ -78,22 +77,9 @@ class SaleOrder(models.Model):
                 apply_genci = order.is_genci
             if not apply_genci:
                 continue
-            source_lines = order.order_line.filtered(
-                lambda l: l.product_id.genci_subject == "yes"
-                and l.product_id.genci_rule_id
-            )
-            if not source_lines:
+            vals_list = sol_model._get_genci_vals(order, genci_product)
+            if not vals_list:
                 continue
-            rule_quantities = {}
-            for line in source_lines:
-                rule = line.product_id.genci_rule_id
-                rule_quantities.setdefault(rule, 0.0)
-                # GENCI amount is computed per sold unit.
-                # No UoM conversion is applied intentionally.
-                rule_quantities[rule] += line.product_uom_qty
-                line.genci_amount = line.product_uom_qty * rule.unit_price
-            last_seq = max(order.order_line.mapped("sequence") or [0])
-            seq = last_seq
             genci_account = (
                 genci_product.property_account_income_id
                 or genci_product.categ_id.property_account_income_categ_id
@@ -103,41 +89,7 @@ class SaleOrder(models.Model):
                     _("No accounting account defined for GENCI product %s")
                     % genci_product.display_name
                 )
-            vals_list = []
-            for rule, qty in rule_quantities.items():
-                seq += 1
-                vals_list.append(
-                    order._prepare_genci_line_vals(
-                        genci_product=genci_product,
-                        rule=rule,
-                        qty=qty,
-                        sequence=seq,
-                    )
-                )
-            if vals_list:
-                sol_model = self.env["sale.order.line"]
-                for vals in vals_list:
-                    try:
-                        sol_model.create(vals)
-                    except Exception:
-                        product = self.env["product.product"].browse(
-                            vals.get("product_id")
-                        )
-                        raise UserError(
-                            _(
-                                "GENCI line could not be created.\n\n"
-                                "Sale Order: %(order)s\n"
-                                "Product: %(product)s\n"
-                                "GENCI Rule: %(rule)s\n\n"
-                                "Please check the configuration of the GENCI "
-                                "product and its accounting accounts."
-                            )
-                            % {
-                                "order": order.name or order.id,
-                                "product": product.display_name,
-                                "rule": vals.get("name"),
-                            }
-                        ) from None
+            sol_model._sync_genci_lines(order, genci_product)
 
     def _prepare_genci_line_vals(self, genci_product, rule, qty, sequence):
         self.ensure_one()
@@ -153,10 +105,10 @@ class SaleOrder(models.Model):
         }
 
     def _remove_genci_lines(self):
-        genci_product = self.env.ref(
-            "l10n_es_genci_account.product_genci_service",
-        )
-        self.order_line.filtered(lambda l: l.product_id == genci_product).unlink()
+        genci_product = self.env.ref("l10n_es_genci_account.product_genci_service")
+        self.order_line.filtered(lambda l: l.product_id == genci_product).with_context(
+            avoid_line_recursion=True
+        ).unlink()
 
     def apply_genci(self):
         draft_orders = self.filtered(lambda o: o.state == "draft" and o.is_genci)
@@ -165,14 +117,15 @@ class SaleOrder(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        # Auto-enable GENCI based on partner configuration
         partner_model = self.env["res.partner"]
         for vals in filter(lambda v: v.get("partner_id"), vals_list):
             partner = partner_model.browse(vals["partner_id"]).exists()
-            # Enable GENCI only if the user did not explicitly set is_genci
             if partner and partner.genci_subject and "is_genci" not in vals:
                 vals["is_genci"] = True
-        orders = super().create(vals_list)
+        orders = super(SaleOrder, self.with_context(avoid_line_recursion=True)).create(
+            vals_list
+        )
+        orders = orders.with_context(avoid_line_recursion=False)
         orders.apply_genci()
         return orders
 
@@ -181,22 +134,25 @@ class SaleOrder(models.Model):
         is_genci_changed = "is_genci" in vals
         res = super().write(vals)
         for order in self:
-            # Auto-enable GENCI if partner changes to one subject to GENCI,
-            # unless the user manually set is_genci in the same write
             if (
                 partner_changed
                 and order.partner_id.genci_subject
                 and not is_genci_changed
             ):
                 order.is_genci = True
-            # If GENCI is manually disabled → remove all GENCI lines
             if is_genci_changed and not order.is_genci:
                 order._remove_genci_lines()
-        # Recompute GENCI lines when relevant fields change
-        if partner_changed or is_genci_changed or "order_line" in vals:
+        if (
+            partner_changed or is_genci_changed or "order_line" in vals
+        ) and not self.env.context.get("avoid_recursion"):
             draft_orders = self.filtered(lambda o: o.state == "draft" and o.is_genci)
             if draft_orders:
-                draft_orders.with_context(
-                    avoid_recursion=True
-                ).manage_genci_order_lines()
+                genci_product = self.env.ref(
+                    "l10n_es_genci_account.product_genci_service",
+                    raise_if_not_found=False,
+                )
+                self.env["sale.order.line"]._sync_genci_lines(
+                    draft_orders,
+                    genci_product,
+                )
         return res
