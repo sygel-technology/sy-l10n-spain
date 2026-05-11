@@ -95,7 +95,6 @@ class SaleOrderLine(models.Model):
                         {
                             "product_uom_qty": vals["product_uom_qty"],
                             "price_unit": vals["price_unit"],
-                            "purchase_price": vals["purchase_price"],
                             "sequence": vals["sequence"],
                             "genci_amount": vals["genci_amount"],
                         }

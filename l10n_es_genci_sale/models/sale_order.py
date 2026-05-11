@@ -98,7 +98,6 @@ class SaleOrder(models.Model):
             "product_id": genci_product.id,
             "product_uom_qty": qty,
             "price_unit": rule.unit_price,
-            "purchase_price": rule.unit_price,
             "name": f"GENCI: {rule.name}",
             "sequence": sequence,
             "genci_amount": qty * rule.unit_price,
