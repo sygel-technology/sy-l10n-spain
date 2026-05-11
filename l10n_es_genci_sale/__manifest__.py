@@ -4,7 +4,7 @@
 {
     "name": "Tasa Genci - Ventas",
     "summary": "Gestión tarifas GENCI - Ventas",
-    "version": "16.0.2.0.0",
+    "version": "16.0.2.0.1",
     "license": "AGPL-3",
     "author": "Sygel",
     "website": "https://github.com/sygel-technology/sy-l10n-spain",
